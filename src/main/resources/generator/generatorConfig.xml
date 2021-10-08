@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<!-- 数据库驱动 -->
+	<!--oracle开始-->
+	<!--<classPathEntry-->
+		<!--location="C:\my\workspace\IdeaProjects\asiainfo\src\main\webapp\WEB-INF\lib\ojdbc6-11.2.0.4.jar" />-->
+	<!--<context id="master" targetRuntime="MyBatis3">-->
+		<!--&lt;!&ndash; 数据库url，用户名和密码 &ndash;&gt;-->
+		<!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"-->
+			<!--connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl"-->
+			<!--userId="asiainfo" password="asiainfo1" />-->
+	<!--oracle结束-->
+	<!--mysql开始-->
+	<classPathEntry
+			location="F:\MavenRepository\mysql\mysql-connector-java\8.0.21\mysql-connector-java-8.0.21.jar" />
+	<context id="master" targetRuntime="MyBatis3">
+		<!-- 数据库url，用户名和密码 -->
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+						connectionURL="jdbc:mysql://rm-bp1i2ivwv45745tt1uo.mysql.rds.aliyuncs.com:3306/teacher_dev"
+						userId="buyi" password="Lps19980318" >
+			<property name="nullCatalogMeansCurrent" value="true" />
+		</jdbcConnection>
+		<!--		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+						connectionURL="jdbc:mysql://127.0.0.1:3306/wogo?serverTimezone=UTC"
+						userId="root" password="root" >-->
+	<!--mysql结束-->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.liurq.student.modules.files.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- 生成映射文件的包名和位置 -->
+		<sqlMapGenerator targetPackage="com.liurq.student.modules.files.mapper.xml"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator targetPackage="com.liurq.student.modules.files.mapper"
+			targetProject="src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!-- 生成的表名 -->
+<!--		<table schema="teacher_dev" tableName="teacher" domainObjectName="Teacher" ></table>-->
+<!--		<table schema="teacher_dev" tableName="student" domainObjectName="Student" ></table>-->
+<!--		<table schema="teacher_dev" tableName="clazz" domainObjectName="Clazz" ></table>-->
+<!--		<table schema="teacher_dev" tableName="event" domainObjectName="Event" ></table>-->
+		<table schema="teacher_dev" tableName="file_record" domainObjectName="FileRecord" ></table>
+<!--		<table schema="teacher_dev" tableName="tr_teacher_clazz" domainObjectName="TeacherClazz" ></table>-->
+<!--		<table schema="teacher_dev" tableName="parent" domainObjectName="Parent" ></table>-->
+<!--		<table schema="teacher_dev" tableName="file" domainObjectName="File" ></table>-->
+<!--		<table schema="teacher_dev" tableName="tr_student_parent" domainObjectName="StudentParent" ></table>-->
+		<table schema="teacher_dev" tableName="tr_file_record" domainObjectName="TRFileRecord" ></table>
+
+	</context>
+</generatorConfiguration>

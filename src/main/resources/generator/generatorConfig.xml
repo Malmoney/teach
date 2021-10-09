@@ -31,20 +31,22 @@
 
 
 		<!-- 生成模型的包名和位置 -->
-		<javaModelGenerator targetPackage="com.liurq.student.modules.files.model"
+<!--		<javaModelGenerator targetPackage="com.liurq.student.modules.files.model"-->
+		<javaModelGenerator targetPackage="com.liurq.teacher.modules.files.model"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<!-- 生成映射文件的包名和位置 -->
-		<sqlMapGenerator targetPackage="com.liurq.student.modules.files.mapper.xml"
+<!--		<sqlMapGenerator targetPackage="com.liurq.student.modules.files.mapper.xml"-->
+		<sqlMapGenerator targetPackage="com.liurq.teacher.modules.files.mapper.xml"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<!-- 生成DAO的包名和位置 -->
-		<javaClientGenerator targetPackage="com.liurq.student.modules.files.mapper"
+		<javaClientGenerator targetPackage="com.liurq.teacher.modules.files.mapper"
 			targetProject="src/main/java" type="XMLMAPPER">
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
@@ -54,12 +56,15 @@
 <!--		<table schema="teacher_dev" tableName="student" domainObjectName="Student" ></table>-->
 <!--		<table schema="teacher_dev" tableName="clazz" domainObjectName="Clazz" ></table>-->
 <!--		<table schema="teacher_dev" tableName="event" domainObjectName="Event" ></table>-->
-		<table schema="teacher_dev" tableName="file_record" domainObjectName="FileRecord" ></table>
+<!--		<table schema="teacher_dev" tableName="file_record" domainObjectName="FileRecord" ></table>-->
+		<table schema="teacher_dev" tableName="file_record" domainObjectName="FileRecordAdmin" ></table>
 <!--		<table schema="teacher_dev" tableName="tr_teacher_clazz" domainObjectName="TeacherClazz" ></table>-->
 <!--		<table schema="teacher_dev" tableName="parent" domainObjectName="Parent" ></table>-->
 <!--		<table schema="teacher_dev" tableName="file" domainObjectName="File" ></table>-->
 <!--		<table schema="teacher_dev" tableName="tr_student_parent" domainObjectName="StudentParent" ></table>-->
-		<table schema="teacher_dev" tableName="tr_file_record" domainObjectName="TRFileRecord" ></table>
+<!--		<table schema="teacher_dev" tableName="tr_file_record" domainObjectName="TRFileRecord" ></table>-->
+<!--		<table schema="teacher_dev" tableName="sys_config" domainObjectName="SysConfig" ></table>-->
+<!--		<table schema="teacher_dev" tableName="sys_user" domainObjectName="SysUser" ></table>-->
 
 	</context>
 </generatorConfiguration>

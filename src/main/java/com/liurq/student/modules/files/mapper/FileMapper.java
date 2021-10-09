@@ -93,4 +93,11 @@ public interface FileMapper {
      * @mbggenerated Mon Sep 20 13:18:35 CST 2021
      */
     int updateByPrimaryKey(File record);
+
+    /**
+     * 根据recordid查询文件列表
+     * @param recordId
+     * @return
+     */
+    List<File> selectListByRecordId(@Param("recordId") String recordId,@Param("urlPrefix") String urlPrefix);
 }

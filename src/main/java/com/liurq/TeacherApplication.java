@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Desc:
  **/
 @SpringBootApplication
-@MapperScan(basePackages = {"com.liurq.modules.files.mapper"})
+@MapperScan(basePackages = {"com.liurq.**.mapper"})
 public class TeacherApplication {
 
     public static void main(String[] args) {

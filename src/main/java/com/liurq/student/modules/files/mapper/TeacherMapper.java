@@ -3,6 +3,8 @@ package com.liurq.student.modules.files.mapper;
 import com.liurq.student.modules.files.model.Teacher;
 import com.liurq.student.modules.files.model.TeacherExample;
 import java.util.List;
+
+import com.liurq.teacher.modules.system.entity.TeacherInfoRsp;
 import org.apache.ibatis.annotations.Param;
 
 public interface TeacherMapper {
@@ -93,4 +95,6 @@ public interface TeacherMapper {
      * @mbggenerated Mon Sep 20 13:13:58 CST 2021
      */
     int updateByPrimaryKey(Teacher record);
+
+    TeacherInfoRsp getTeacherInfoById(@Param("id") String id);
 }
